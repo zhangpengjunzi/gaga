@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transpent">#00000000</color>
+    <!--侧滑-->
+    <color name="slide_red">#Fd6049</color>
+    <color name="slide_bg">#E8E8E8</color>
+    <!--登录-->
+    <color name="login_btn">#323232</color>
+    <!--支付-->
+    <color name="actionbar_color">#8B1A1A</color>
+
+    <color name="bottom_line_color">#e5e5e5</color>
+    <color name="shadow">#25808080</color>
+    <color name="hint">#cccccc</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+    <color name="none_settings">#BDBDBD</color>
+
+    <color name="main_color">#f7f7f7</color>
+    <color name="start_page">#FF0000</color>
+</resources>

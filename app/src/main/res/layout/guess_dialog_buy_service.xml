@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/close_buyservice_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:src="@mipmap/close_dialog"
+            app:layout_paddingLeftPercent="5%" />
+
+        <TextView
+            android:id="@+id/buyservice_center_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="投注次数"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:src="@mipmap/help"
+            android:id="@+id/buyservice_help_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            app:layout_paddingRightPercent="5%" />
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bottom_line_color"></View>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_paddingTopPercent="5%"
+        app:layout_paddingBottomPercent="6%"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+            <TextView
+                android:id="@+id/buyservice_title"
+                app:layout_marginLeftPercent="5%"
+                app:layout_marginRightPercent="5%"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                android:text="你当前单个题目的投注上限为5次，提升至"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <GridView
+                android:id="@+id/buyservice_grid"
+                android:numColumns="3"
+                android:listSelector="@android:color/transparent"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="5dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                app:layout_marginTopPercent="4%"
+                app:layout_marginLeftPercent="10%"
+                app:layout_marginRightPercent="10%"
+                app:layout_marginBottomPercent="4%"
+                android:layout_height="wrap_content">
+            </GridView>
+            <TextView
+                android:id="@+id/buy_btn"
+                android:text="立即兑换"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/guess_buyservice_dialog"
+                android:layout_width="0dp"
+                app:layout_widthPercent="85%"
+                android:layout_height="50dp" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</com.zhy.android.percent.support.PercentLinearLayout>

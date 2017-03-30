@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <include layout="@layout/guess_common_layout_titleview"></include>
+
+    <ScrollView
+        android:id="@+id/scroll_award"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <com.zhy.android.percent.support.PercentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_award_height"
+                android:background="@android:color/white">
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/award_number_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_marginLeftPercent="10%">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="按下注额度"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/actionBar_title" />
+
+                    <TextView
+                        android:id="@+id/award_number_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="满额开奖"
+                        android:textSize="@dimen/send_info_size" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    app:layout_paddingBottomPercent="3%"
+                    app:layout_paddingLeftPercent="3%"
+                    app:layout_paddingRightPercent="5%"
+                    app:layout_paddingTopPercent="3%" />
+            </com.zhy.android.percent.support.PercentFrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bottom_line_color"
+                app:layout_marginLeftPercent="5%"></View>
+
+            <com.sinocall.guess.view.LinearListView
+                android:id="@+id/award_number_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:splitMotionEvents="false"></com.sinocall.guess.view.LinearListView>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        layout="@layout/guess_common_no_data"></include>
+
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/actionbar_color"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/pay_center_linear"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/actionbar_color">
+
+                <ImageView
+                    android:id="@+id/back_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/back"
+                    app:layout_paddingLeftPercent="2%"
+                    app:layout_paddingBottomPercent="2%"
+                    app:layout_paddingTopPercent="2%"
+                    app:layout_paddingRightPercent="2%"
+                    app:layout_marginLeftPercent="3%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="充值中心"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pay_center_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="明细"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/actionBar_right_text"
+                    app:layout_marginRightPercent="5%" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--产品区域-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/pay_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_center_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="盘缠余额"
+                    app:layout_marginLeftPercent="5%" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/pay_padding"
+                android:paddingTop="@dimen/pay_padding">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总账户"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/actionBar_right_text" />
+
+                    <TextView
+                        android:id="@+id/surplus_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="1000"
+                        android:textColor="@color/actionbar_color"
+                        android:textSize="@dimen/pay_number_size" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/actionbar_color"></View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可兑换"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/actionBar_right_text" />
+
+                    <TextView
+                        android:id="@+id/can_exchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="1000"
+                        android:textColor="@color/actionbar_color"
+                        android:textSize="@dimen/pay_number_size" />
+                </LinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_center_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购买盘缠"
+                    app:layout_marginLeftPercent="5%" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.sinocall.guess.view.LinearListView
+                android:id="@+id/buy_type_list"
+                android:layout_width="match_parent"
+                android:splitMotionEvents="false"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></com.sinocall.guess.view.LinearListView>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_center_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式"
+                    app:layout_marginLeftPercent="5%" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.sinocall.guess.view.LinearListView
+                android:id="@+id/pay_type_list"
+                android:layout_width="match_parent"
+                android:splitMotionEvents="false"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></com.sinocall.guess.view.LinearListView>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"></com.zhy.android.percent.support.PercentLinearLayout>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"
+        layout="@layout/guess_common_no_data"></include>
+
+    <com.sinocall.guess.view.ProgressWebview
+        android:id="@+id/webView"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.sinocall.guess.view.ProgressWebview>
+
+    <!--支付信息区域-->
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/pay_bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pay_center_height"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/bottom_line_color"
+            android:layout_height="0.5dp"></View>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_paddingLeftPercent="3%">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计："
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/actionBar_title" />
+
+                <TextView
+                    android:id="@+id/pay_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥9.0元"
+                    android:textStyle="bold"
+                    android:textColor="@color/slide_red"
+                    android:textSize="@dimen/actionBar_title" />
+
+                <TextView
+                    android:id="@+id/pay_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/slide_red"
+                    android:textSize="@dimen/release_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pay_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@color/actionbar_color"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即支付"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/actionBar_title" />
+            </LinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</android.support.design.widget.CoordinatorLayout>

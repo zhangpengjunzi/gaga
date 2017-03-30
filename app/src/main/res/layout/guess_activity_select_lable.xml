@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+        <include layout="@layout/guess_common_layout_titleview"></include>
+        <com.sinocall.guess.view.MyScrollView
+            android:id="@+id/lable_scroll"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_height="0dp">
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="40dp">
+                                <TextView
+                                    android:text="精准的标签有助于更多的竞猜"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            app:layout_paddingLeftPercent="3%"
+                            app:layout_paddingRightPercent="3%"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content">
+                                <com.sinocall.guess.view.tagview.TagFlowLayout
+                                    android:id="@+id/select_lable"
+                                    android:layout_width="match_parent"
+                                    app:gravity="center"
+                                    app:max_select="1"
+                                    android:layout_height="wrap_content">
+                                </com.sinocall.guess.view.tagview.TagFlowLayout>
+                        </LinearLayout>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.sinocall.guess.view.MyScrollView>
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            layout="@layout/guess_common_no_data"></include>
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <include layout="@layout/guess_common_layout_titleview"></include>
+        <com.sinocall.guess.view.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_height="0dp">
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pay_center_height"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人信息"
+                            app:layout_marginLeftPercent="5%" />
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/user_head_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="头像"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                        <com.sinocall.guess.view.CircleImageView
+                            android:id="@+id/user_head_image"
+                            android:layout_gravity="right|center_vertical"
+                            app:layout_marginRightPercent="5%"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/bottom_line_color"
+                        app:layout_marginLeftPercent="5%"
+                        android:layout_height="0.5dp"></View>
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/user_nickname_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="昵称"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                        <TextView
+                            android:id="@+id/user_nickname_text"
+                            android:text="未设置"
+                            android:layout_gravity="right|center_vertical"
+                            android:textColor="@color/none_settings"
+                            android:textSize="@dimen/actionBar_title"
+                            app:layout_marginRightPercent="5%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/bottom_line_color"
+                        app:layout_marginLeftPercent="5%"
+                        android:layout_height="0.5dp"></View>
+
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/user_gender_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="性别"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                        <TextView
+                            android:id="@+id/user_gender_text"
+                            android:text="未设置"
+                            android:layout_gravity="right|center_vertical"
+                            android:textColor="@color/none_settings"
+                            android:textSize="@dimen/actionBar_title"
+                            app:layout_marginRightPercent="5%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pay_center_height"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="账号"
+                            app:layout_marginLeftPercent="5%" />
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/user_phone_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手机"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                        <TextView
+                            android:id="@+id/user_phone_text"
+                            android:text="未绑定"
+                            android:layout_gravity="right|center_vertical"
+                            android:textColor="@color/none_settings"
+                            android:textSize="@dimen/actionBar_title"
+                            app:layout_marginRightPercent="5%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/bottom_line_color"
+                        app:layout_marginLeftPercent="5%"
+                        android:layout_height="0.5dp"></View>
+
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/user_paypass_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="支付密码"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                        <TextView
+                            android:id="@+id/user_paypass_text"
+                            android:text="未设置"
+                            android:layout_gravity="right|center_vertical"
+                            android:textColor="@color/none_settings"
+                            android:textSize="@dimen/actionBar_title"
+                            app:layout_marginRightPercent="5%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/about_us_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关于我们"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/bottom_line_color"
+                        app:layout_marginLeftPercent="5%"
+                        android:layout_height="0.5dp"></View>
+
+                    <com.zhy.android.percent.support.PercentFrameLayout
+                        android:id="@+id/out_login_frame"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btn_background_selector"
+                        android:layout_height="@dimen/pay_center_height">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="退出登录"
+                            android:textColor="@color/slide_red"
+                            android:textSize="@dimen/actionBar_title"
+                            android:layout_gravity="center_vertical"
+                            app:layout_marginLeftPercent="5%" />
+                    </com.zhy.android.percent.support.PercentFrameLayout>
+
+                </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.sinocall.guess.view.MyScrollView>
+</LinearLayout>

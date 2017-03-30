@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">猜猜看</string>
+    <string name="notice_one">会员充值时，根据其当前等级对应的充值折扣自动换算。比如，原价为1:100，如果当前会员对应95折，那么其0.95:100。
+</string>
+    <string name="notice_two">会员参与题目时，针对同一个题目，每日可免费参与的次数有上限，等级越高上限越高。
+</string>
+    <string name="notice_four">会员可以发布题目，不同的等级每日可以免费发布的题目数量有上限，等级越高上限越高。
+</string>
+    <string name="notice_three">会员发布题目后，当题目成功开奖后，会从题目失败方获得题目制作稿费。等级越高稿费比例越高。
+</string>
+    <string name="notice_five">会员参与题目时，不同的等级每日可以免费参与的题目数量有上限，等级越高上限越高。
+</string>
+    <string name="notice_six">会员在发布题目时，可以设置触发题目开奖的额度，不同的等级可以设置的额度不同，等级越高额度越高。
+</string>
+    <string name="about_us_company">© 2015-2017 风语者软件（北京）有限公司版权所有</string>
+    <string name="about_us_telephone">400-812-1888</string>
+
+    <string name="share_title">你有你的自由，我有我的态度</string>
+
+    <string name="new_guide_one">1.下拉可刷新最新题目内容</string>
+    <string name="new_guide_two">2.左滑回看题目，右滑看新题目</string>
+    <string name="new_guide_three">3.按下左或右的爱心表示你的态度</string>
+    <string name="new_guide_four">4.更多题目规则，请看帮助中心</string>
+    <string name="partner_title">足不出户，动动手指，每天2小时，月入2000块</string>
+    <string name="partner_content">合伙人可以通过猜猜看平台制作题目，利用网络传播出去，会得到题目制作费的奖励。合伙人的级别越高，可得到的题目制作费越高。</string>
+    
+    <string name="create_notice_title">发布题目 赚制作费</string>
+    <string name="create_notice_content">将新建的题目分享给更多的人，题目开奖即可赚到奖励，会员级别越高奖励越多。随时随地，动动手指，每天2小时，月入2000块。</string>
+</resources>

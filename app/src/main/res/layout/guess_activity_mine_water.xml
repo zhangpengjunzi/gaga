@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/actionbar_color"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/back_image"
+                    android:src="@mipmap/back"
+                    app:layout_paddingLeftPercent="2%"
+                    app:layout_paddingBottomPercent="2%"
+                    app:layout_paddingTopPercent="2%"
+                    app:layout_paddingRightPercent="2%"
+                    app:layout_marginLeftPercent="3%"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="我的流水"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/recycler_view"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+    <include
+        layout="@layout/guess_common_no_data"></include>
+
+</android.support.design.widget.CoordinatorLayout>

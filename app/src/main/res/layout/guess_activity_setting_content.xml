@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_linear"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/guess_common_layout_titleview"></include>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_heightPercent="13%"
+            app:layout_paddingLeftPercent="10%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选项内容"
+                android:layout_marginBottom="2dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/actionBar_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置选项内容，字数不得超过4个"
+                android:layout_marginTop="2dp"
+                android:textSize="@dimen/send_info_size" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <View
+            app:layout_marginLeftPercent="5%"
+            android:layout_width="match_parent"
+            android:background="@color/bottom_line_color"
+            android:layout_height="0.5dp"></View>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_heightPercent="13%"
+            app:layout_paddingLeftPercent="10%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选项一"
+                app:layout_marginRightPercent="5%"
+                android:textColor="@color/slide_red"
+                android:textSize="@dimen/actionBar_title" />
+
+            <EditText
+                android:id="@+id/select_one_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="请输入内容"
+                android:maxLength="4"
+                android:textSize="@dimen/actionBar_title" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            app:layout_marginLeftPercent="5%"
+            android:background="@color/bottom_line_color"
+            android:layout_height="0.5dp"></View>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_heightPercent="13%"
+            app:layout_paddingLeftPercent="10%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选项二"
+                app:layout_marginRightPercent="5%"
+                android:textColor="@color/slide_red"
+                android:textSize="@dimen/actionBar_title" />
+
+            <EditText
+                android:id="@+id/select_two_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="请输入内容"
+                android:maxLength="4"
+                android:textSize="@dimen/actionBar_title" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</LinearLayout>

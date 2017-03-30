@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="slide_text_title">16sp</dimen>
+    <dimen name="slide_text_content">14sp</dimen>
+    <dimen name="slide_text_margin_top">8dp</dimen>
+    <dimen name="slide_text_margin_right">15dp</dimen>
+    <dimen name="slide_linear_margin_top">20dp</dimen>
+    <dimen name="slide_linear_margin_top_pay">30dp</dimen>
+
+    <dimen name="actionBar_title">16sp</dimen>
+    <dimen name="actionBar_right_text">16sp</dimen>
+
+    <dimen name="pay_center_height">50dp</dimen>
+    <dimen name="pay_number_size">30sp</dimen>
+    <dimen name="pay_padding">20dp</dimen>
+
+    <dimen name="release_title">14sp</dimen>
+
+    <dimen name="send_info_size">14sp</dimen>
+    <dimen name="setting_award_height">75dp</dimen>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/guess_fragment_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home"
+            android:orientation="vertical"
+            app:layout_marginLeftPercent="3%"
+            app:layout_marginRightPercent="3%"
+            app:layout_marginTopPercent="2%">
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/fragment_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%"
+                android:orientation="vertical">
+
+                <com.sinocall.guess.view.OvalImageView
+                    android:id="@+id/guess_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_heightPercent="54%"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/guess_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center_vertical"
+                    app:layout_marginBottomPercent="2%"
+                    app:layout_marginLeftPercent="5%"
+                    app:layout_marginRightPercent="5%"
+                    app:layout_marginTopPercent="2%" />
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_heightPercent="20%">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:layout_paddingBottomPercent="4%"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/guess_left_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="红方"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="14sp" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:id="@+id/red_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="100"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="@dimen/sp_12" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guess_progress_background"
+                        android:padding="1dp">
+
+                        <com.sinocall.guess.view.RoundProgressBar
+                            android:id="@+id/roundProgressBar"
+                            android:layout_width="70dip"
+                            android:layout_height="70dip"
+                            android_custom:roundColor="#fff"
+                            android_custom:roundProgressColor="@color/none_settings"
+                            android_custom:roundWidth="10dp"
+                            android_custom:textIsDisplayable="false" />
+
+                        <TextView
+                            android:id="@+id/award_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="5000"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:layout_paddingBottomPercent="4%"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/guess_right_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="蓝方"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="14sp" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:id="@+id/blue_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="100"
+                                android:textColor="@android:color/holo_blue_light"
+                                android:textSize="@dimen/sp_12" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <LinearLayout
+                android:id="@+id/no_data_linear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="100%">
+
+                <ImageView
+                    android:src="@mipmap/image_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/no_data_text"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="没有更多题目了" />
+            </LinearLayout>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</LinearLayout>
